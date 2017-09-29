@@ -1,3 +1,153 @@
-<p>
-  about works!
-</p>
+<div class="app-card-container">
+  <div class="card">
+    <h1 class="text-center">Vinh Nguyen FirmsOne's CPO</h1>
+    <h2 class="text-center">Who is building 50 shades grey contract and learn to draw naked pictures.</h2>
+    <hr>
+  
+    <div class="row">
+      <div class="col-md-4">
+        <img src="assets/images/about/profile.jpg" width="100%" alt="profile image">
+        <div class="skills" *ngFor="let skill of skills">
+            <div class="skill">
+              <h4>{{skill.title }}</h4>
+              <ngb-progressbar type="info" [value]=skill.percent_utilized [striped]="true"
+              ></ngb-progressbar>
+            </div>
+        </div>
+      </div>
+
+      <div class="col-md-8">
+        <p>
+          With 0.5 decade of development experience in a number of industries I realized that the typical product creation process between clients and developers was flawed. All too often developers rarely communicate to clients throughout the development stage, resulting in a final product that fails to reach the goal sought by the customer and end user.
+        </p>
+
+        <p>
+          For this reason I decided to utilize a completely different development pattern that focuses on highly focused communication and transparent design patterns. When I take on a project not only do I work to craft the application according to the client's specifications, I give daily updates to ensure that the project is aligning properly with the client's goals. The end result is the right product, delivered on time, and on budget.
+        </p>
+        <button type="button" class="btn btn-primary" (click)="isCollapsedJob = !isCollapsedJob"
+                [attr.aria-expanded]="!isCollapsedJob" aria-controls="JobHistory">
+          Job History
+        </button>
+
+        <button type="button" class="btn btn-primary" (click)="isCollapsedEducation = !isCollapsedEducation"
+                [attr.aria-expanded]="!isCollapsedEducation" aria-controls="education">
+          Education
+        </button>
+        <button type="button" class="btn btn-primary" (click)="isCollapsedCourse = !isCollapsedCourse"
+                [attr.aria-expanded]="!isCollapsedCourse" aria-controls="courses">
+          Projects Developed
+        </button>
+        <button type="button" class="btn btn-primary" (click)="isCollapsedPress = !isCollapsedPress"
+                [attr.aria-expanded]="!isCollapsedPress" aria-controls="press">
+          Press
+        </button>
+        <div id="JobHistory" [ngbCollapse]="isCollapsedJob">
+            <div class="card card-block">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="assets/images/about/gcs.jpg" width='100%'>
+                </div>
+                <div class="col-md-9">
+                  <strong>Release Manager && C++ Developper</strong> - Developed CCTV projects and delivered CCTV's services product to Japan customer. 
+                </div>
+              </div>
+            </div>
+            <div class="card card-block">
+              <div class="row">
+                <div class="col-md-3">
+                <img src="assets/images/about/firmsone.png" width='100%'>
+                </div>
+                <div class="col-md-9">
+                  <strong>CPO && Sr. Sp. Ruby On Rails</strong> - Write blogs, build 50 shades grey contract and learn draw naked pictures
+                </div>
+              </div>
+            </div>
+            <div class="card card-block">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="assets/images/about/zigexn.jpg" width='100%'>
+                </div>
+                <div class="col-md-9">
+                  <strong>Ruby On Rails developer</strong> - Developed arubaitoex and Jobs product of Zigexn co-operation.
+                </div>
+              </div>
+            </div>
+            <div class="card card-block">
+              <div class="row">
+                <div class="col-md-3">
+                  <img src="assets/images/about/lcl.jpg" width='100%'>
+                </div>
+                <div class="col-md-9">
+                  <strong>SR. SP. Ruby On Rails and Web Developper</strong> - Developed for smartday project.
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div [ngbCollapse]="isCollapsedEducation" id="education">
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="assets/images/about/hcmus.png" width="100%"> 
+              </div>
+              <div class="col-md-9">
+                Graduated Physics from University of Science with a BS in Computer Science.
+              </div>
+            </div>
+          </div>
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-md-3">
+                <img src='assets/images/about/maryland.png' width='100%' />
+              </div>
+              <div class="col-md-9">
+                Specialist Android and Cloud Computing Certificates <strong>verified by coursera</strong>.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div [ngbCollapse]="isCollapsedCourse" id="courses">
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="https://www.sourcesecurity.com/products-search-results/digital-recorders/make.mk-396-ga.html" target='_blank'>
+                  <img src='assets/images/projects/cctv.jpg' width='100%' />
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://arubaito-ex.jp/" target='_blank'>
+                  <img src='assets/images/projects/arubaitoex.png' width='100%' />
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://www.firmsone.com/#/" target='_blank'>
+                  <img src='assets/images/projects/firmsone.png' width='100%' />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="card card-block">
+            <div class="row">
+              <div class="col-md-4">
+                <a href="https://www.firmsone.com/#/" target='_blank'>
+                  <img src='assets/images/projects/firmsoneblog.png' width='100%' />
+                </a>
+              </div>
+              <div class="col-md-4">
+                <a href="https://www.firmsone.com/#/" target='_blank'>
+                  <img src='assets/images/projects/lcl.jpg' width='100%' />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div [ngbCollapse]="isCollapsedPress" id="press">
+          
+        </div>
+
+
+      </div>
+  </div>
+</div>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   scope :api, defaults: {format: :json}  do 
     resources :technologies
     resources :topics
+    resources :skills
     resources :portfolios
     resources :blogs do 
       member do 

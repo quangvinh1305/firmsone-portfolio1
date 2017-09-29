@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import {SkillsService} from './services/skills.service'
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
     HttpModule,
     RouterModule,
     FroalaEditorModule.forRoot(), 
-    FroalaViewModule.forRoot()
+    FroalaViewModule.forRoot(), 
+    NgbModule.forRoot()
   ],
   providers: [Angular2TokenService, SkillsService],
   bootstrap: [AppComponent]
