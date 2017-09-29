@@ -6,6 +6,8 @@ class PagesController < ApplicationController
   end
 
   def about
+    @skills = Skill.all
+    render json: @blogs
   end
 
   def contact
