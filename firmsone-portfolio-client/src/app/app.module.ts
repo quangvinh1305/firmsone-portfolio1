@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import {SkillsService} from './services/skills.service'
+import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +20,9 @@ import {SkillsService} from './services/skills.service'
     BrowserModule,
     AppRoutingModule,
     HttpModule,
-    RouterModule
+    RouterModule,
+    FroalaEditorModule.forRoot(), 
+    FroalaViewModule.forRoot()
   ],
   providers: [Angular2TokenService, SkillsService],
   bootstrap: [AppComponent]
