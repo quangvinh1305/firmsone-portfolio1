@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {SkillsService} from './services/skills.service'
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {LayoutModule} from './layout/layout.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     RouterModule,
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(), 
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    LayoutModule
   ],
   providers: [Angular2TokenService, SkillsService],
   bootstrap: [AppComponent]
