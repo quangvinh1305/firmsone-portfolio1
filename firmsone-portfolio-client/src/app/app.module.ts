@@ -11,12 +11,18 @@ import { AppRoutingModule } from './app-routing.module';
 import {SkillsService} from './services/skills.service'
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {LayoutModule} from './layout/layout.module'
+import {LayoutModule} from './layout/layout.module';
+import { ContactComponent } from './contact/contact.component';
+import { TechNewsComponent } from './tech-news/tech-news.component';
+import { BlogsComponent } from './blogs/blogs.component'
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    ContactComponent,
+    TechNewsComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
