@@ -12,9 +12,12 @@ import {SkillsService} from './services/skills.service'
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {LayoutModule} from './layout/layout.module';
+import { BlogsModule } from './blogs/blogs.module'
 import { ContactComponent } from './contact/contact.component';
 import { TechNewsComponent } from './tech-news/tech-news.component';
-import { BlogsComponent } from './blogs/blogs.component'
+import { MomentModule } from 'angular2-moment';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +25,6 @@ import { BlogsComponent } from './blogs/blogs.component'
     AboutComponent,
     ContactComponent,
     TechNewsComponent,
-    BlogsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +34,7 @@ import { BlogsComponent } from './blogs/blogs.component'
     FroalaEditorModule.forRoot(), 
     FroalaViewModule.forRoot(), 
     NgbModule.forRoot(),
-    LayoutModule
+    LayoutModule, BlogsModule, MomentModule
   ],
   providers: [Angular2TokenService, SkillsService],
   bootstrap: [AppComponent]

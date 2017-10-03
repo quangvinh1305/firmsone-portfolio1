@@ -1,0 +1,8 @@
+<div class="blog-post blog-body" *ngFor="let blog of blogs">
+  <h2 class="blog-post-title"><a (click)="goToShow(blog)">{{blog.title}}</a></h2>
+  <p class="blog-post-meta">Published {{blog.created_at | amTimeAgo}} ago</p>
+  <p>
+    {{blog.body.substring(0, 600)}}
+    <a (click)="goToShow(blog)">Continue reading</a>
+  </p>
+</div>
